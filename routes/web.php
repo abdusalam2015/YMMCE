@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('ymmce');
 });
+Route::resource('ymmce','YmmceController');
+Route::get('/{name}' , function(){
+  return redirect('/');
+})->where('name','[A-Za-z]+');
